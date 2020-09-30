@@ -1,0 +1,8 @@
+*swp
+*checkpoint*
+*pyc
+*.DS_Store
+*.vectors
+/joey/vectors/
+/Earthquake/images/*.html
+
