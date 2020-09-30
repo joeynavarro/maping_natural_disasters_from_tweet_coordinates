@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block title%} Home Page {% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock head %}
+{% block content %}
+    <body>
+      <h1>Emergency Responder Interface</h1>
+      <form action="/submit">
+
+      <input type="radio" id="strict" name="search" value="strict">
+      <label for="strict">Strict Search (ALL Keywords)</label>
+
+      <input type="radio" id="loose" name="search" value="loose">
+      <label for="loose">Loose Search (ANY Keywords)</label><br>
+      <br><br>
+      <label for="input">Please input the keywords for your search, separate by commas.</label>
+      <br></br>
+      <textarea id="emergencyinput" name="emergencyinput"
+      rows="4" cols="50">
+      </textarea>
+      <br><br>
+      <input type="radio" id="earthquake" name="event" value="earthquake">
+      <label for="earthquake">Earthquake</label><br>
+      <input type="radio" id="wildfire" name="event" value="wildfire">
+      <label for="wildfire">Wildfire</label><br>
+      <input type="radio" id="hurricane" name="event" value="hurricane">
+      <label for="hurricane">Hurricane</label><br>
+      <input type="radio" id="all" name="event" value="all">
+      <label for="all">All</label>
+      <br></br>
+      <input type="submit" value="Submit">
+      </form>
+    </body>
+
+
+{% endblock content %}
